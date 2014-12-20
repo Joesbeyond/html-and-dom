@@ -6,7 +6,8 @@
 
     <!-- add javascript libs at here -->
     <script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
-    <script type="text/javascript" src="lib/dist/css/bootstrap.min.css"></script>    
+
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css">    
     <!-- add javascript sources at here -->
     <script type="text/javascript" src="js/model/topic.js"></script>
     <script type="text/javascript" src="js/model/fill-in-topic.js"></script>
@@ -16,36 +17,74 @@
     <script type="text/javascript" src="js/model/short-answer-topic.js"></script>
     <script type="text/javascript" src="js/model/answer-checker.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+   
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
 </head>
 <body>
 
 <form action="#" method="post" autocomplete="off">
-    <header id="header1">
-        <p id="title">统一建模语言理论测试</p>
-        <table class="table">
-            <div class="d1">  <tr>
-                <td>考试科目：</td>
-                <td>统一建模语言</td>
-                <td>时间：</td>
-                <td>100分钟</td>
-                <td>得分：<span id="totalScore"></span></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="className">班级：</label></td>
-                <td><input type="text" id="className" name="className"></td>
-                <td><label for="studentNumber">学号：</label></td>
-                <td><input type="text" id="studentNumber" name="studentNumber"></td>
-                <td><label for="studentName">姓名：</label></td>
-                <td><input type="text" id="studentName" name="studentName"></td>
-            </tr></div>
-        </table>
+        
+    <header>
+            <div class="row">
+                <div class="col-md-12 text-center h2">
+                    统一建模语言理论测试
+                </div>
+            </div>
+                <div class="panel panel-primary">
+                  <div class="panel-body">
+                    <div class="row">
+                    <div class="col-md-4">
+                        <label class="control-lab1el">
+                            考试科目：
+                        </label>
+                        统一建模语言
+                    </div>
+                    <div class="col-md-4">
+                        <label class="control-label">
+                            时间：
+                        </label>
+                        100分钟
+                    </div>
+                    <div id="totalScore_formGroup" class="col-md-4">
+                        <label class="control-label">
+                            得分：
+                        </label>
+                        <span id="totalScore" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="row form-inline">
+                    <div id="className_formGroup" class="col-md-4 form-group">
+                        <label class="control-label">
+                            班级 *：
+                            <input type="text" id="className" name="className" class="form-control">
+                        </label>
+                    </div>
+                    <div id="studentNumber_formGroup" class="col-md-4 form-group">
+                        <label class="control-label">
+                            学号 *：
+                            <input type="text" id="studentNumber" name="studentNumber" class="form-control">
+                        </label>
+                    </div>
+                    <div id="studentName_formGroup" class="col-md-4 form-group">
+                        <label class="control-label">
+                            姓名 *：
+                            <input type="text" id="studentName" name="studentName" class="form-control">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section>
-        <header>
+        <header><div >
             <h1>一、填空题（每空5分，共20分）</h1>
+            </div>
         </header>
         <ol>
             <li>
@@ -191,7 +230,11 @@
     </section>
 
     <footer>
-        <input id="button" type="submit" value="计算分数" onclick="return submit_onclick()">
+      <div class="row">
+          <div class="col-md-10 text-center">
+        <input id="button" class="btn btn-primary btn-lg " type="submit" value="计算分数" onclick="return submit_onclick()">
+        </div>
+        </div>
     </footer>
 </form>
 
