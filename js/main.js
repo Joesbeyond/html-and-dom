@@ -37,7 +37,9 @@ function hasEmptyRequiredInput(inputs) {
         var input = inputs[i];
         var element = document.getElementById(input.id);
         if (element && _.isEmpty(element.value)) {
+
             alert('请输入' + input.text + '！');
+            document.getElementById(input.id).focus();
             return true;
         }
     }
